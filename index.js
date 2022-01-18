@@ -22,13 +22,13 @@ try {
       
       var doc = new dom().parseFromString(data);
       var nodes = xpath.select(xpathToSearch, doc);
-
+      console.log(nodes)
       console.log(`Found ${nodes.length} nodes.`);
 
       if (nodes.length) {
         var output = [];
         for (var i = 0; i < nodes.length; i++) {
-          output.push(nodes[i].firstChild.data);
+          output.push(nodes[i]);
         }
         core.setOutput('info', output);
         console.log(`Output: ${output}`);
