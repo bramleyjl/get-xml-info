@@ -27,7 +27,7 @@ try {
       if (nodes.length) {
         var output = [];
         for (var i = 0; i < nodes.length; i++) {
-          var single_quoted = nodes[i].replace(/"/g,"'");
+          var single_quoted = nodes[i].toString().replace(/"/g,"'");
           output.push(single_quoted);
         }
         core.setOutput('info', output);
