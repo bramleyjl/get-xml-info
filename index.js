@@ -27,8 +27,7 @@ try {
       if (nodes.length) {
         var output = [];
         for (var i = 0; i < nodes.length; i++) {
-          output.push(nodes[i]);
-          console.log(output)
+          output.push(escape(nodes[i]));
         }
         core.setOutput('info', output);
         console.log(`Output: ${output}`);
